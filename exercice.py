@@ -5,25 +5,20 @@ from collections import Counter
 def order(values: list = None) -> list:
     liste_to_order =  []
     if values is None:
+        for i in range(10):
+            liste_to_order.append(input("Entrez une valeur : "))
         # TODO: demander les valeurs ici
-        
-     pass
+
+    return sorted(liste_to_order)
+     
 
 
 def anagrams(words: list = None) -> bool:
     if words is None:
         # TODO: demander les mots ici
-        word1 = input("Entrez le premier mot : ")
-        word2 = input("Entrez le deuxième mot : ")
-        anagrame = True
-        for i in word1:
-            if i not in word2:
-                anagrame = False
-            elif len(word2) != len(word1):
-                anagrame = False
-        #pass
-    print(anagrame)
-    return anagrame
+        words = [input("Mot 1 : "), input("Mot 2 : ")]
+        pass
+    return sorted(words[0]) == sorted(words[1]) 
     
 
 
@@ -60,7 +55,7 @@ def frequence(sentence: str) -> dict:
     #       Retourner le tableau de lettres
 
 
-    print(answer)
+    print(answer2)
     return answer
 
 
